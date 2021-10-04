@@ -24,20 +24,35 @@ a game that anybody may enjoy.
 <h3> Screenshots of the game </h3>
 
 <h4> Login Page
+<h4>
 
 ![pic](https://imgur.com/xks2OKG.png)
 
 </h4>
+<br>
 
 <h4> In game Page
-
-![pic](https://imgur.com/mbQAig7.png)
-
 </h4>
 
-<h4>The Game</h4>
+![pic](https://imgur.com/mbQAig7.png)
+</h4>
+</h4>
+
+<h4> The Game
+</h4>
 
 ![pic](https://imgur.com/iNuA5RX.png)
+</h4>
+<br>
+
+<h4> Testing
+</h4>
+
+![pic](https://imgur.com/CSkFog4.png)
+
+<br>
+
+![pic](https://imgur.com/g2M4VD0.png)
 
 <h3>Tools used for this project:</h3>
 
