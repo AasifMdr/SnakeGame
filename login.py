@@ -222,6 +222,18 @@ def maingame():
             self.apple = Apple(self.surface)
             self.apple.draw()
 
+        def play_background_music(self):
+            pygame.mixer.music.load('Images/bg_music_1.mp3')
+            pygame.mixer.music.play(-1, 0)
+
+        def play_sound(self, sound_name):
+            if sound_name == "crash":
+                sound = pygame.mixer.Sound("Images/crash.mp3")
+            elif sound_name == 'ding':
+                sound = pygame.mixer.Sound("Images/ding.mp3")
+
+            pygame.mixer.Sound.play(sound)
+
         def reset(self):
             self.snake = Snake(self.surface)
             self.apple = Apple(self.surface)
@@ -245,12 +257,14 @@ def maingame():
 
             # snake eating apple scenario
             if self.is_collision(self.snake.x[0], self.snake.y[0], self.apple.x, self.apple.y):
+                self.play_sound("ding")
                 self.snake.increase_length()
                 self.apple.move()
 
             # snake colliding with itself
             for i in range(3, self.snake.length):
                 if self.is_collision(self.snake.x[0], self.snake.y[0], self.snake.x[i], self.snake.y[i]):
+                    self.play_sound('crash')
                     raise "Collision Occurred"
 
         def display_score(self):
